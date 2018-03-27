@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2018.03.27.10:29:29"
- outputDirectory="D:/ece_385/Lab9/db/ip/sld7bb2859b/">
+ date="2018.03.27.13:41:09"
+ outputDirectory="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/">
  <perimeter>
   <parameter
      name="AUTO_DEVICE_FAMILY"
@@ -47,31 +47,34 @@
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="" />
   <generatedFiles>
-   <file path="D:/ece_385/Lab9/db/ip/sld7bb2859b/alt_sld_fab.v" type="VERILOG" />
+   <file
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/alt_sld_fab.v"
+       type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab.v"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab.v"
        type="VERILOG" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_presplit.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_presplit.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_splitter.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_splitter.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd"
        type="VHDL"
        attributes="" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_ident.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_ident.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
   </childGeneratedFiles>
   <sourceFiles>
-   <file path="D:/ece_385/Lab9/db/ip/sld7bb2859b/alt_sld_fab_wrapper_hw.tcl" />
+   <file
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/alt_sld_fab_wrapper_hw.tcl" />
   </sourceFiles>
   <childSourceFiles>
    <file
@@ -162,24 +165,24 @@
   <parameter name="MIRROR" value="0" />
   <generatedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab.v"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab.v"
        type="VERILOG" />
   </generatedFiles>
   <childGeneratedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_presplit.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_presplit.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_splitter.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_splitter.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd"
        type="VHDL"
        attributes="" />
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_ident.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_ident.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
   </childGeneratedFiles>
@@ -248,7 +251,7 @@
   <parameter name="RECEIVE_WIDTHS" value="24 25" />
   <generatedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_presplit.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_presplit.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
   </generatedFiles>
@@ -278,7 +281,7 @@
   <parameter name="ADD_INTERFACE_ASGN" value="0" />
   <generatedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_splitter.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_splitter.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
   </generatedFiles>
@@ -319,7 +322,7 @@
   <parameter name="FORCE_IR_CAPTURE_FEATURE" value="1" />
   <generatedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd"
        type="VHDL"
        attributes="" />
   </generatedFiles>
@@ -347,7 +350,7 @@
   <parameter name="DESIGN_HASH" value="1374ec1483287e7c6d66" />
   <generatedFiles>
    <file
-       path="D:/ece_385/Lab9/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_ident.sv"
+       path="C:/altera/15.0/Programs/lab9git/db/ip/sld7bb2859b/submodules/alt_sld_fab_alt_sld_fab_ident.sv"
        type="SYSTEM_VERILOG"
        attributes="TOP_LEVEL_FILE" />
   </generatedFiles>

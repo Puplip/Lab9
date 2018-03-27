@@ -1,6 +1,6 @@
 Flow report for Lab9
-Tue Mar 27 10:30:33 2018
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Tue Mar 27 13:42:22 2018
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
 
 
 ---------------------
@@ -38,26 +38,26 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Flow Summary                                                                    ;
-+------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 27 10:30:33 2018      ;
-; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
-; Revision Name                      ; Lab9                                       ;
-; Top-level Entity Name              ; lab9_top                                   ;
-; Family                             ; Cyclone IV E                               ;
-; Device                             ; EP4CE115F29C7                              ;
-; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 3,017 / 114,480 ( 3 % )                    ;
-;     Total combinational functions  ; 2,419 / 114,480 ( 2 % )                    ;
-;     Dedicated logic registers      ; 1,978 / 114,480 ( 2 % )                    ;
-; Total registers                    ; 2097                                       ;
-; Total pins                         ; 142 / 529 ( 27 % )                         ;
-; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 11,392 / 3,981,312 ( < 1 % )               ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
-; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
-+------------------------------------+--------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Flow Summary                                                                                   ;
++------------------------------------+-----------------------------------------------------------+
+; Flow Status                        ; Successful - Tue Mar 27 13:42:22 2018                     ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition ;
+; Revision Name                      ; Lab9                                                      ;
+; Top-level Entity Name              ; lab9_top                                                  ;
+; Family                             ; Cyclone IV E                                              ;
+; Device                             ; EP4CE115F29C7                                             ;
+; Timing Models                      ; Final                                                     ;
+; Total logic elements               ; 3,017 / 114,480 ( 3 % )                                   ;
+;     Total combinational functions  ; 2,419 / 114,480 ( 2 % )                                   ;
+;     Dedicated logic registers      ; 1,978 / 114,480 ( 2 % )                                   ;
+; Total registers                    ; 2097                                                      ;
+; Total pins                         ; 142 / 529 ( 27 % )                                        ;
+; Total virtual pins                 ; 0                                                         ;
+; Total memory bits                  ; 11,392 / 3,981,312 ( < 1 % )                              ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                           ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                                            ;
++------------------------------------+-----------------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/27/2018 10:29:11 ;
+; Start date & time ; 03/27/2018 13:40:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab9                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                      ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1099135008000.152216455111452                              ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193675813923896.152217604607068                            ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                          ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                            ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                         ; --            ; --          ; --             ;
@@ -104,12 +104,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:27     ; 1.0                     ; 894 MB              ; 00:00:43                           ;
-; Fitter                    ; 00:00:33     ; 1.0                     ; 1305 MB             ; 00:00:31                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 695 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 878 MB              ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 700 MB              ; 00:00:04                           ;
-; Total                     ; 00:01:13     ; --                      ; --                  ; 00:01:26                           ;
+; Analysis & Synthesis      ; 00:00:33     ; 1.0                     ; 893 MB              ; 00:01:00                           ;
+; Fitter                    ; 00:00:37     ; 1.0                     ; 1338 MB             ; 00:00:35                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 686 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 864 MB              ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 693 MB              ; 00:00:04                           ;
+; Total                     ; 00:01:25     ; --                      ; --                  ; 00:01:48                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,11 +118,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; GladOS           ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; GladOS           ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; GladOS           ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; GladOS           ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; GladOS           ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-J6BQUER  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-J6BQUER  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-J6BQUER  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-J6BQUER  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-J6BQUER  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

@@ -70,13 +70,15 @@ void addRoundKey(matrix * state, matrix * round_key, int round){
 	int i, j;
 
 	//print old round key for debug
+	/**
 	printf("\nOld Key:\n");
 	for(i = 0; i < 4; i++){
 		for (j = 0; j < 4; j++) {
-			printf("%02x, ", round_key->bytes[i][j]);
+			printf("%02x, ", round_key->bytes[j][i]);
 		}
 		printf("\n");
 	}
+	**/
 
 
 	//xor state with the round key
@@ -100,14 +102,53 @@ void addRoundKey(matrix * state, matrix * round_key, int round){
 	for(i = 1; i < 4; i++){
 		round_key->words[i] = temp.words[i] ^ round_key->words[i-1];
 	}
+}
 
-	//print new round key for debug
-	printf("\nNew Key:\n");
+void subBytes(matrix * state) {
+	int i, j;
+
 	for (i = 0; i < 4; i++) {
 		for (j = 0; j < 4; j++) {
-			printf("%02x, ", round_key->bytes[i][j]);
+			state->bytes[i][j] = aes_sbox[state->bytes[i][j]];
 		}
-		printf("\n");
+	}
+}
+
+void shiftRows(matrix * state) {
+
+	matrix temp = *state;
+
+	state->bytes[0][1] = temp.bytes[1][1];
+	state->bytes[1][1] = temp.bytes[2][1];
+	state->bytes[2][1] = temp.bytes[3][1];
+	state->bytes[3][1] = temp.bytes[0][1];
+
+	state->bytes[0][2] = temp.bytes[2][2];
+	state->bytes[1][2] = temp.bytes[3][2];
+	state->bytes[2][2] = temp.bytes[0][2];
+	state->bytes[3][2] = temp.bytes[1][2];
+
+	state->bytes[0][3] = temp.bytes[3][3];
+	state->bytes[1][3] = temp.bytes[0][3];
+	state->bytes[2][3] = temp.bytes[1][3];
+	state->bytes[3][3] = temp.bytes[2][3];
+}
+
+void mixColumns(matrix * state) {
+
+	int i;
+
+	matrix temp = *state;
+
+	for (i = 0; i < 3; i++) {
+		state->bytes[i][0] = gf_mul[temp.bytes[i][0]][0] ^ gf_mul[temp.bytes[i][1]][1] ^
+				temp.bytes[i][2] ^ temp.bytes[i][3];
+		state->bytes[i][1] = temp.bytes[i][0] ^ gf_mul[temp.bytes[i][1]][0] ^
+				gf_mul[temp.bytes[i][2]][1] ^ temp.bytes[i][3];
+		state->bytes[i][2] = temp.bytes[i][0] ^ temp.bytes[i][1] ^ gf_mul[temp.bytes[i][2]][0] ^
+				gf_mul[temp.bytes[i][3]][1];
+		state->bytes[i][3] = gf_mul[temp.bytes[i][0]][1] ^ temp.bytes[i][1] ^ temp.bytes[i][2] ^
+				gf_mul[temp.bytes[i][3]][0];
 	}
 }
 
@@ -134,7 +175,33 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 			count += 2;
 		}
 	}
+
+
+	//hardcodes the key
+	round_key.words[0] = 0x03020100;
+	round_key.words[1] = 0x07060504;
+	round_key.words[2] = 0x0b0a0908;
+	round_key.words[3] = 0x0f0e0d0c;
+
+	state.words[0] = 0x5530ecda;
+	state.words[1] = 0x1c8e05df;
+	state.words[2] = 0xea14e839;
+	state.words[3] = 0x7e74f676;
+
+
 	addRoundKey(&state,&round_key,1);
+
+	for (i = 0; i < 9; i++) {
+		subBytes(&state);
+		shiftRows(&state);
+		mixColumns(&state);
+		addRoundKey(&state,&round_key, i+2);
+	}
+
+	subBytes(&state);
+	shiftRows(&state);
+	addRoundKey(&state,&round_key, 11);
+
 }
 
 /** decrypt
