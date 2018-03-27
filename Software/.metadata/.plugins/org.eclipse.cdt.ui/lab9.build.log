@@ -1,0 +1,31 @@
+23:53:10 **** Incremental Build of configuration Nios II for project lab9 ****
+make all 
+Info: Building ../lab9_bsp/
+D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../lab9_bsp//HAL/inc -I../lab9_bsp/ -I../lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/main.o main.c
+main.c: In function 'encrypt':
+main.c:118:2: warning: passing argument 1 of 'addRoundKey' from incompatible pointer type
+  addRoundKey(state,round_key,1);
+  ^
+main.c:64:6: note: expected 'unsigned char **' but argument is of type 'unsigned char (*)[4]'
+ void addRoundKey(unsigned char ** state, unsigned char ** round_key, int round){
+      ^
+main.c:118:2: warning: passing argument 2 of 'addRoundKey' from incompatible pointer type
+  addRoundKey(state,round_key,1);
+  ^
+main.c:64:6: note: expected 'unsigned char **' but argument is of type 'unsigned char (*)[4]'
+ void addRoundKey(unsigned char ** state, unsigned char ** round_key, int round){
+      ^
+Info: Linking lab9.elf
+nios2-elf-g++  -T'../lab9_bsp//linker.x' -msys-crt0='../lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lab9_bsp/   -Wl,-Map=lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert lab9.elf --thread_model hal --cpu_name nios2_qsys_0 --qsys true --simulation_enabled false --id 0 --sidp 0x28 --timestamp 1522117246 --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name lab9_soc --quartus_project_dir "D:/ECE_385/Lab9_Avalon_Provided_2.0" --jdi ../..//output_files/Lab9.jdi --sopcinfo D:/ECE_385/Lab9_Avalon_Provided_2.0/Software/lab9_bsp/../../lab9_soc.sopcinfo
+Info: (lab9.elf) 99 KBytes program size (code + initialized data).
+Info:            130967 KBytes free for stack + heap.
+Info: Creating lab9.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source lab9.elf >lab9.objdump
+[lab9 build complete]
+
+23:53:13 Build Finished (took 3s.924ms)
+
