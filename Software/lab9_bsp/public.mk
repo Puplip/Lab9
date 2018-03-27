@@ -152,14 +152,21 @@ SOPC_SYSID_FLAG += --id=0
 ELF_PATCH_FLAG  += --id 0
 
 # The SOPC System ID Base Address 
-# setting SOPC_SYSID_BASE_ADDRESS is 0x28
-SOPC_SYSID_FLAG += --sidp=0x28
-ELF_PATCH_FLAG  += --sidp 0x28
+# setting SOPC_SYSID_BASE_ADDRESS is 0x40
+SOPC_SYSID_FLAG += --sidp=0x40
+ELF_PATCH_FLAG  += --sidp 0x40
 
 # The SOPC Timestamp 
-# setting SOPC_TIMESTAMP is 1522117246
-SOPC_SYSID_FLAG += --timestamp=1522117246
-ELF_PATCH_FLAG  += --timestamp 1522117246
+# setting SOPC_TIMESTAMP is 1522164485
+SOPC_SYSID_FLAG += --timestamp=1522164485
+ELF_PATCH_FLAG  += --timestamp 1522164485
+
+# Enable JTAG UART driver to recover when host is inactive causing buffer to 
+# full without returning error. Printf will not fail with this recovery. none 
+# setting altera_avalon_jtag_uart_driver.enable_jtag_uart_ignore_fifo_full_error is false
+
+# Small-footprint (polled mode) driver none 
+# setting altera_avalon_jtag_uart_driver.enable_small_driver is false
 
 # Build a custom version of newlib with the specified space-separated compiler 
 # flags. The custom newlib build will be placed in the <bsp root>/newlib 

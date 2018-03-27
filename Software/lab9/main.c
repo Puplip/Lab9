@@ -12,11 +12,14 @@ University of Illinois ECE Department
 #include <stdio.h>
 #include <time.h>
 #include "aes.h"
-#include "system.h"
 
 // Pointer to base address of AES module, make sure it matches Qsys
 volatile unsigned int * AES_PTR = (unsigned int *) 0x00000010;
 
+typedef union {
+	unsigned int words[4];
+	unsigned char bytes[4][4];
+} matrix;
 
 // Execution mode: 0 for testing, 1 for benchmarking
 int run_mode = 0;
@@ -61,38 +64,50 @@ char charsToHex(char c1, char c2)
 }
 
 
-void addRoundKey(unsigned int * state, unsigned int * round_key, int round){
+void addRoundKey(matrix * state, matrix * round_key, int round){
+
+	//idk because errors
 	int i, j;
+
+	//print old round key for debug
+	printf("\nOld Key:\n");
 	for(i = 0; i < 4; i++){
-		printf("%x %x %x %x\n",round_key[0][i]&0xff,round_key[1][i]&0xff,round_key[2][i]&0xff,round_key[3][i]&0xff);
-	}
-	unsigned char temp[4][4];
-	for(i = 0; i < 4; i++){
-		for(j = 0; j < 4; j++){
-			state[i][j] ^= round_key[i][j];
-			temp[i][j] = round_key[i][j];
+		for (j = 0; j < 4; j++) {
+			printf("%02x, ", round_key->bytes[i][j]);
 		}
+		printf("\n");
 	}
-	unsigned char * round_key_pointer = (unsigned char *)(&(round_key[0]));
 
-	round_key[0][0] = temp[3][1];
-	round_key[0][1] = temp[3][2];
-	round_key[0][2] = temp[3][3];
-	round_key[0][3] = temp[3][0];
 
-	round_key[0][0] = aes_sbox[round_key[0][0]];
-	round_key[0][1] = aes_sbox[round_key[0][1]];
-	round_key[0][2] = aes_sbox[round_key[0][2]];
-	round_key[0][3] = aes_sbox[round_key[0][3]];
-
-	unsigned int * temp2 = (unsigned int *)(round_key[0]);
-	*temp2 = *temp2 ^ *(unsigned int *)(temp[0]) ^ Rcon[round];
-	for(i = 1; i < 4; i++){
-		temp2 = (unsigned int *)(round_key[i]);
-		*temp2 = *(unsigned int *)(temp[i]) ^  *(unsigned int *)(round_key[i-1]);
-	}
+	//xor state with the round key
 	for(i = 0; i < 4; i++){
-		printf("%x %x %x %x\n",round_key[0][i]&0xff,round_key[1][i]&0xff,round_key[2][i]&0xff,round_key[3][i]&0xff);
+		state->words[i] ^= round_key->words[i];
+	}
+
+	//save the last round key
+	matrix temp = *round_key;
+
+	//do the rotation and the substitution in one step
+	round_key->bytes[0][0] = aes_sbox[temp.bytes[3][1]];
+	round_key->bytes[0][1] = aes_sbox[temp.bytes[3][2]];
+	round_key->bytes[0][2] = aes_sbox[temp.bytes[3][3]];
+	round_key->bytes[0][3] = aes_sbox[temp.bytes[3][0]];
+
+	//first column special xor
+	round_key->words[0] ^= temp.words[0] ^ Rcon[round];
+
+	//next three column xors
+	for(i = 1; i < 4; i++){
+		round_key->words[i] = temp.words[i] ^ round_key->words[i-1];
+	}
+
+	//print new round key for debug
+	printf("\nNew Key:\n");
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 4; j++) {
+			printf("%02x, ", round_key->bytes[i][j]);
+		}
+		printf("\n");
 	}
 }
 
@@ -108,20 +123,18 @@ void addRoundKey(unsigned int * state, unsigned int * round_key, int round){
 void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int * msg_enc, unsigned int * key)
 {
 	int i,j;
-	unsigned int round_key[4];
-	unsigned int state[4];
+	matrix round_key;
+	matrix state;
 	int count = 0;
 	for(i = 0; i < 4; i++){
-		unsigned char * state_pointer = (unsigned char *)(&(state[i]));
-		unsigned char * round_key_pointer = (unsigned char *)(&(round_key[i]));
 		for(j = 0; j < 4; j++){
-			state[j] = charsToHex(msg_ascii[count],msg_ascii[count+1]);
-			round_key[j] = charsToHex(key_ascii[count],key_ascii[count+1]);
-			key[count/2] = round_key_pointer[j];
+			state.bytes[i][j] = charsToHex(msg_ascii[count],msg_ascii[count+1]);
+			round_key.bytes[i][j] = charsToHex(key_ascii[count],key_ascii[count+1]);
+			key[count/2] = round_key.bytes[i][j];
 			count += 2;
 		}
 	}
-	addRoundKey(state,round_key,1);
+	addRoundKey(&state,&round_key,1);
 }
 
 /** decrypt
@@ -149,6 +162,8 @@ int main()
 	unsigned int key[4];
 	unsigned int msg_enc[4];
 	unsigned int msg_dec[4];
+
+	*AES_PTR = 0x12345678;
 
 	printf("Select execution mode: 0 for testing, 1 for benchmarking: ");
 	scanf("%d", &run_mode);

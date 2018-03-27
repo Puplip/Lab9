@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="ea7c2583b9c6172cb84c"/>
+    <hash md5_digest_80b="1374ec1483287e7c6d66"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="Lab9.sof" usercode="0xFFFFFFFF"/>
@@ -83,9 +83,23 @@
     </node>
   </node_info>
   <sld_infos>
+    <sld_info hpath="lab9_soc:lab9_qsystem|lab9_soc_jtag_uart_0:jtag_uart_0|alt_jtag_atlantic:lab9_soc_jtag_uart_0_alt_jtag_atlantic|altera_sld_agent_endpoint:inst|altera_fabric_endpoint:ep" library="work" name="ep">
+      <assignment_values/>
+      <parameters>
+        <assignment name="SLD_NODE_INFO" type="dec" value="0"/>
+        <assignment name="sld_endpoint_type" type="dec" value="0"/>
+        <assignment name="send_width" type="dec" value="3"/>
+        <assignment name="receive_width" type="dec" value="24"/>
+        <assignment name="num_clocks" type="dec" value="0"/>
+        <assignment name="settings" type="string" value="{fabric sld dir agent mfr_code 110 type_code 128 version 1 instance -1 ir_width 1 prefer_host { } psig f63706bb}"/>
+        <assignment name=" constraint(settings)" type="string" value="1 to 112"/>
+        <assignment name=" constraint(send)" type="string" value="2 downto 0"/>
+        <assignment name=" constraint(receive)" type="string" value="23 downto 0"/>
+      </parameters>
+    </sld_info>
     <sld_info hpath="lab9_soc:lab9_qsystem" name="lab9_qsystem">
       <assignment_values>
-        <assignment_value text="QSYS_NAME lab9_soc HAS_SOPCINFO 1 GENERATION_ID 1522117246"/>
+        <assignment_value text="QSYS_NAME lab9_soc HAS_SOPCINFO 1 GENERATION_ID 1522164485"/>
       </assignment_values>
       <parameters/>
     </sld_info>

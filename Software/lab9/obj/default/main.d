@@ -1,8 +1,3 @@
-obj/default/main.o: main.c aes.h ../lab9_bsp/system.h \
- ../lab9_bsp/linker.h
+obj/default/main.o: main.c aes.h
 
 aes.h:
-
-../lab9_bsp/system.h:
-
-../lab9_bsp/linker.h:
