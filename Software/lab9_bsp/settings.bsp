@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 27, 2018 2:08:13 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1522177693807</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Mar 27, 2018 4:56:40 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1522187800920</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\altera\15.0\Programs\lab9git\Software\lab9_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\lab9_soc.sopcinfo</SopcDesignFile>
@@ -14,7 +14,7 @@
                 <SettingName>hal.sys_clk_timer</SettingName>
                 <Identifier>ALT_SYS_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>none</Value>
+                <Value>timer_0</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of the system clock timer device. This device provides a periodic interrupt ("tick") and is typically required for RTOS use. This setting defines the value of ALT_SYS_CLK in system.h.</Description>
@@ -893,16 +893,10 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>aes</slaveDescriptor>
-                <addressRange>0x00000010 - 0x0000001F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>jtag_uart_0</slaveDescriptor>
+                <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
                 <addressRange>0x00000028 - 0x0000002F</addressRange>
                 <addressSpan>8</addressSpan>
-                <attributes>printable</attributes>
+                <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sdram_pll</slaveDescriptor>
@@ -911,9 +905,21 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x00000040 - 0x00000047</addressRange>
+                <slaveDescriptor>timer_0</slaveDescriptor>
+                <addressRange>0x00000040 - 0x0000005F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>jtag_uart_0</slaveDescriptor>
+                <addressRange>0x00000060 - 0x00000067</addressRange>
                 <addressSpan>8</addressSpan>
+                <attributes>printable</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>AES_Decryption_Core_0</slaveDescriptor>
+                <addressRange>0x00000100 - 0x0000013F</addressRange>
+                <addressSpan>64</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>

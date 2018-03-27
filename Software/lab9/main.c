@@ -14,7 +14,7 @@ University of Illinois ECE Department
 #include "aes.h"
 
 // Pointer to base address of AES module, make sure it matches Qsys
-volatile unsigned int * AES_PTR = (unsigned int *) 0x00000010;
+volatile unsigned int * AES_PTR = (unsigned int *) 0x00000100;
 
 typedef union {
 	unsigned int words[4];
@@ -183,13 +183,22 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 		for(j = 0; j < 4; j++){
 			state.bytes[i][j] = charsToHex(msg_ascii[count],msg_ascii[count+1]);
 			round_key.bytes[i][j] = charsToHex(key_ascii[count],key_ascii[count+1]);
-			key[count/2] = round_key.bytes[i][j];
-			count += 2;
+			count+=2;
 		}
+		key[i] = 0;
+		key[i] |= round_key.bytes[i][0];
+		key[i] = key[i] << 8;
+		key[i] |= round_key.bytes[i][1];
+		key[i] = key[i] << 8;
+		key[i] |= round_key.bytes[i][2];
+		key[i] = key[i] << 8;
+		key[i] |= round_key.bytes[i][3];
 	}
 
 
+
 	//hardcodes the key
+	/**
 	round_key.words[0] = 0x03020100;
 	round_key.words[1] = 0x07060504;
 	round_key.words[2] = 0x0b0a0908;
@@ -199,6 +208,7 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 	state.words[1] = 0xdc98e2ec;
 	state.words[2] = 0xdc98e2ec;
 	state.words[3] = 0xdc98e2ec;
+	**/
 
 
 	addRoundKey(&state,&round_key,1);
@@ -230,6 +240,12 @@ void encrypt(unsigned char * msg_ascii, unsigned char * key_ascii, unsigned int 
 		msg_enc[i] |= state.bytes[i][2] << 8;
 		msg_enc[i] |= state.bytes[i][3];
 	}
+
+	AES_PTR[0] = key[0];
+	AES_PTR[1] = key[1];
+	AES_PTR[2] = key[2];
+	AES_PTR[3] = key[3];
+
 }
 
 /** decrypt
@@ -258,7 +274,6 @@ int main()
 	unsigned int msg_enc[4];
 	unsigned int msg_dec[4];
 
-	*AES_PTR = 0x12345678;
 
 	printf("Select execution mode: 0 for testing, 1 for benchmarking: ");
 	scanf("%d", &run_mode);

@@ -39,4 +39,26 @@ module avalon_aes_interface (
 );
 
 
+logic [15:0][31:0] Regs;
+logic [15:0] Chip_Selects;
+
+register reg00(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[00]),.CS(Chip_Selects[00] && AVL_CS));
+register reg01(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[01]),.CS(Chip_Selects[01] && AVL_CS));
+register reg02(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[02]),.CS(Chip_Selects[02] && AVL_CS));
+register reg03(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[03]),.CS(Chip_Selects[03] && AVL_CS));
+register reg04(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[04]),.CS(Chip_Selects[04] && AVL_CS));
+register reg05(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[05]),.CS(Chip_Selects[05] && AVL_CS));
+register reg06(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[06]),.CS(Chip_Selects[06] && AVL_CS));
+register reg07(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[07]),.CS(Chip_Selects[07] && AVL_CS));
+register reg08(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[08]),.CS(Chip_Selects[08] && AVL_CS));
+register reg09(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[09]),.CS(Chip_Selects[09] && AVL_CS));
+register reg11(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[11]),.CS(Chip_Selects[11] && AVL_CS));
+register reg12(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[12]),.CS(Chip_Selects[12] && AVL_CS));
+register reg13(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[13]),.CS(Chip_Selects[13] && AVL_CS));
+register reg14(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[14]),.CS(Chip_Selects[14] && AVL_CS));
+register reg15(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[15]),.CS(Chip_Selects[15] && AVL_CS));
+
+mux16 my_mux(.*,.Data_In(Regs),.Data_Out(AVL_WRITEDATA));
+dec16 my_dec(.*,.Out(Chip_Selects));
+
 endmodule

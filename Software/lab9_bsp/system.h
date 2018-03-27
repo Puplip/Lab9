@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'lab9_soc'
  * SOPC Builder design path: ../../lab9_soc.sopcinfo
  *
- * Generated: Tue Mar 27 12:27:39 CDT 2018
+ * Generated: Tue Mar 27 16:33:15 CDT 2018
  */
 
 /*
@@ -53,6 +53,20 @@
 
 /* Include definitions from linker script generator */
 #include "linker.h"
+
+
+/*
+ * AES_Decryption_Core_0 configuration
+ *
+ */
+
+#define AES_DECRYPTION_CORE_0_BASE 0x100
+#define AES_DECRYPTION_CORE_0_IRQ -1
+#define AES_DECRYPTION_CORE_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define AES_DECRYPTION_CORE_0_NAME "/dev/AES_Decryption_Core_0"
+#define AES_DECRYPTION_CORE_0_SPAN 64
+#define AES_DECRYPTION_CORE_0_TYPE "AES_Decryption_Core"
+#define ALT_MODULE_CLASS_AES_Decryption_Core_0 AES_Decryption_Core
 
 
 /*
@@ -133,11 +147,12 @@
  *
  */
 
+#define __AES_DECRYPTION_CORE
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_NEW_SDRAM_CONTROLLER
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
-#define __ALTERA_AVALON_PIO
 #define __ALTERA_AVALON_SYSID_QSYS
+#define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_GEN2
 #define __ALTPLL
 
@@ -158,51 +173,24 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x28
+#define ALT_STDERR_BASE 0x60
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x28
+#define ALT_STDIN_BASE 0x60
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x28
+#define ALT_STDOUT_BASE 0x60
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
 #define ALT_SYSTEM_NAME "lab9_soc"
-
-
-/*
- * aes configuration
- *
- */
-
-#define AES_BASE 0x10
-#define AES_BIT_CLEARING_EDGE_REGISTER 0
-#define AES_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define AES_CAPTURE 0
-#define AES_DATA_WIDTH 32
-#define AES_DO_TEST_BENCH_WIRING 0
-#define AES_DRIVEN_SIM_VALUE 0
-#define AES_EDGE_TYPE "NONE"
-#define AES_FREQ 50000000
-#define AES_HAS_IN 0
-#define AES_HAS_OUT 1
-#define AES_HAS_TRI 0
-#define AES_IRQ -1
-#define AES_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define AES_IRQ_TYPE "NONE"
-#define AES_NAME "/dev/aes"
-#define AES_RESET_VALUE 0
-#define AES_SPAN 16
-#define AES_TYPE "altera_avalon_pio"
-#define ALT_MODULE_CLASS_aes altera_avalon_pio
 
 
 /*
@@ -212,7 +200,7 @@
 
 #define ALT_INCLUDE_INSTRUCTION_RELATED_EXCEPTION_API
 #define ALT_MAX_FD 32
-#define ALT_SYS_CLK none
+#define ALT_SYS_CLK TIMER_0
 #define ALT_TIMESTAMP_CLK none
 
 
@@ -222,7 +210,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x28
+#define JTAG_UART_0_BASE 0x60
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -322,13 +310,39 @@
  */
 
 #define ALT_MODULE_CLASS_sysid_qsys_0 altera_avalon_sysid_qsys
-#define SYSID_QSYS_0_BASE 0x40
+#define SYSID_QSYS_0_BASE 0x28
 #define SYSID_QSYS_0_ID 0
 #define SYSID_QSYS_0_IRQ -1
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1522164485
+#define SYSID_QSYS_0_TIMESTAMP 1522186126
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
+
+
+/*
+ * timer_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_timer_0 altera_avalon_timer
+#define TIMER_0_ALWAYS_RUN 0
+#define TIMER_0_BASE 0x40
+#define TIMER_0_COUNTER_SIZE 32
+#define TIMER_0_FIXED_PERIOD 0
+#define TIMER_0_FREQ 50000000
+#define TIMER_0_IRQ 1
+#define TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define TIMER_0_LOAD_VALUE 49999
+#define TIMER_0_MULT 0.001
+#define TIMER_0_NAME "/dev/timer_0"
+#define TIMER_0_PERIOD 1
+#define TIMER_0_PERIOD_UNITS "ms"
+#define TIMER_0_RESET_OUTPUT 0
+#define TIMER_0_SNAPSHOT 1
+#define TIMER_0_SPAN 32
+#define TIMER_0_TICKS_PER_SEC 1000
+#define TIMER_0_TIMEOUT_PULSE_OUTPUT 0
+#define TIMER_0_TYPE "altera_avalon_timer"
 
 #endif /* __SYSTEM_H_ */
