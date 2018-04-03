@@ -10,6 +10,7 @@ University of Illinois ECE Department
 
 // Note that KeyExpansion does not complete in single clock cycle.
 // Run simulation to see how many clock cycles it takes for key schedule to complete.
+//it's 10
 module KeyExpansion (
 	input  logic clk,
 	input  logic [127:0]  Cipherkey,

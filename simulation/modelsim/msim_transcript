@@ -1,0 +1,131 @@
+# Reading D:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Lab9_run_msim_rtl_systemverilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying D:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlib lab9_soc
+# ** Warning: (vlib-34) Library already exists at "lab9_soc".
+# 
+# vmap lab9_soc lab9_soc
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet lab9_soc lab9_soc 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lab9_soc +incdir+D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules {D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:18 on Apr 02,2018
+# vlog -reportprogress 300 -vlog01compat -work lab9_soc "+incdir+D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules" D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v 
+# -- Compiling module lab9_soc_jtag_uart_0_sim_scfifo_w
+# -- Compiling module lab9_soc_jtag_uart_0_scfifo_w
+# -- Compiling module lab9_soc_jtag_uart_0_sim_scfifo_r
+# -- Compiling module lab9_soc_jtag_uart_0_scfifo_r
+# -- Compiling module lab9_soc_jtag_uart_0
+# 
+# Top level modules:
+# 	lab9_soc_jtag_uart_0
+# End time: 23:46:18 on Apr 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Projects/Lab9_Part2/Lab9 {D:/Projects/Lab9_Part2/Lab9/SubBytes.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:18 on Apr 02,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/Lab9_Part2/Lab9" D:/Projects/Lab9_Part2/Lab9/SubBytes.sv 
+# -- Compiling module SubBytes
+# -- Compiling module InvSubBytes
+# 
+# Top level modules:
+# 	SubBytes
+# 	InvSubBytes
+# End time: 23:46:18 on Apr 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Projects/Lab9_Part2/Lab9 {D:/Projects/Lab9_Part2/Lab9/InvShiftRows.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:18 on Apr 02,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/Lab9_Part2/Lab9" D:/Projects/Lab9_Part2/Lab9/InvShiftRows.sv 
+# -- Compiling module InvShiftRows
+# 
+# Top level modules:
+# 	InvShiftRows
+# End time: 23:46:19 on Apr 02,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Projects/Lab9_Part2/Lab9 {D:/Projects/Lab9_Part2/Lab9/InvMixColumns.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:19 on Apr 02,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/Lab9_Part2/Lab9" D:/Projects/Lab9_Part2/Lab9/InvMixColumns.sv 
+# -- Compiling module InvMixColumns
+# -- Compiling package InvMixColumns_sv_unit
+# -- Compiling module GF_Mul_9
+# -- Compiling module GF_Mul_b
+# -- Compiling module GF_Mul_d
+# -- Compiling module GF_Mul_e
+# 
+# Top level modules:
+# 	InvMixColumns
+# End time: 23:46:19 on Apr 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Projects/Lab9_Part2/Lab9 {D:/Projects/Lab9_Part2/Lab9/KeyExpansion.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:19 on Apr 02,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/Lab9_Part2/Lab9" D:/Projects/Lab9_Part2/Lab9/KeyExpansion.sv 
+# -- Compiling module KeyExpansion
+# -- Compiling module KeyExpansionOne
+# 
+# Top level modules:
+# 	KeyExpansion
+# End time: 23:46:19 on Apr 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/Projects/Lab9_Part2/Lab9 {D:/Projects/Lab9_Part2/Lab9/AES.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:19 on Apr 02,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/Lab9_Part2/Lab9" D:/Projects/Lab9_Part2/Lab9/AES.sv 
+# -- Compiling module AES
+# 
+# Top level modules:
+# 	AES
+# End time: 23:46:19 on Apr 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/Projects/Lab9_Part2/Lab9 {D:/Projects/Lab9_Part2/Lab9/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 23:46:19 on Apr 02,2018
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Projects/Lab9_Part2/Lab9" D:/Projects/Lab9_Part2/Lab9/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 23:46:19 on Apr 02,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs="+acc"  testbench
+# vsim -gui "+altera" -l msim_transcript -do "Lab9_run_msim_rtl_systemverilog.do" 
+# Start time: 23:46:19 on Apr 02,2018
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.AES
+# Loading work.KeyExpansion
+# Loading work.KeyExpansionOne
+# Loading work.SubBytes
+# Loading work.InvShiftRows
+# Loading work.InvMixColumns
+# Loading work.InvMixColumns_sv_unit
+# Loading work.GF_Mul_9
+# Loading work.GF_Mul_b
+# Loading work.GF_Mul_d
+# Loading work.GF_Mul_e
+# Loading work.InvSubBytes
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 3000 ns
+# End time: 23:47:37 on Apr 02,2018, Elapsed time: 0:01:18
+# Errors: 0, Warnings: 0

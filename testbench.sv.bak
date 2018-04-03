@@ -1,0 +1,24 @@
+module testbench ();
+
+timeprecision 1ns;
+timeunit 10ns;
+
+always begin : CLOCK_GENERATION
+#1 clk = ~clk;
+end
+
+initial begin: CLOCK_INITIALIZATION
+    clk = 0;
+end 
+
+logic clk;
+logic [127:0]  Cipherkey;
+logic [1407:0] KeySchedule;
+KeyExpansion ke0(.*)
+
+initial begin
+#4 Cipherkey = 128'h3b280014beaac269d613a16bfdc2be03
+end
+
+
+endmodule

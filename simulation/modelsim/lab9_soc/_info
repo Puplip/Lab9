@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projects/Lab9_Part2/Lab9/simulation/modelsim
+vlab9_soc_jtag_uart_0
+Z1 !s110 1522730778
+!i10b 1
+!s100 jK?Yc>e4J0OIMiLNRISi;1
+IQcebON53CIZ>kNih=IDN;3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+Z3 w1522720805
+Z4 8D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v
+Z5 FD:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v
+L0 327
+Z6 OV;L;10.3d;59
+r1
+!s85 0
+31
+Z7 !s108 1522730778.699000
+Z8 !s107 D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|lab9_soc|+incdir+D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules|D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v|
+!i113 1
+Z10 o-vlog01compat -work lab9_soc
+Z11 !s92 -vlog01compat -work lab9_soc +incdir+D:/Projects/Lab9_Part2/Lab9/lab9_soc/synthesis/submodules
+vlab9_soc_jtag_uart_0_scfifo_r
+R1
+!i10b 1
+!s100 :=YHPADeWbJciI<ghDKA23
+I;TB_WeDKYkF`Ki3^Q6H472
+R2
+R0
+R3
+R4
+R5
+L0 240
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vlab9_soc_jtag_uart_0_scfifo_w
+R1
+!i10b 1
+!s100 RDATA7GY@8@c9XnE0?5=?3
+IRXO?DJ9DlSfl:OlJG@4_o1
+R2
+R0
+R3
+R4
+R5
+L0 77
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vlab9_soc_jtag_uart_0_sim_scfifo_r
+R1
+!i10b 1
+!s100 eihEaC<9]Lhk7@`l[ALAU2
+I^<MXLn;<<eICbXTzmK_Q43
+R2
+R0
+R3
+R4
+R5
+L0 162
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vlab9_soc_jtag_uart_0_sim_scfifo_w
+R1
+!i10b 1
+!s100 21`?gd^k@T36Ho4bc@4g70
+ICYV?i?bbc]]bImRSToNm=3
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

@@ -53,9 +53,8 @@ assign EXPORT_DATA[15:0] = Registers[0][15:0];
 assign AVL_READDATA = Registers[AVL_ADDR];
 
 always_ff @ (posedge CLK) begin
-	if(RESET)
-		
-	if(AVL_WRITE)
+
+if(AVL_WRITE)
 		Registers[AVL_ADDR] = Registers_Next;
 end
 
