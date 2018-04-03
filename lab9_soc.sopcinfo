@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="lab9_soc" kind="lab9_soc" version="1.0" fabric="QSYS">
  <!-- Format version 15.0 145 (Future versions may contain additional information.) -->
- <!-- 2018.03.27.16:28:46 -->
+ <!-- 2018.04.03.15:57:16 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1522186126</value>
+  <value>1522789035</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -96,10 +96,10 @@
   <valid>true</valid>
  </parameter>
  <module
-   name="AES_Decryption_Core_0"
+   name="AES_Decryption_Core_1"
    kind="AES_Decryption_Core"
-   version="1.1"
-   path="AES_Decryption_Core_0">
+   version="1.0"
+   path="AES_Decryption_Core_1">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="deviceFamily">
@@ -583,12 +583,6 @@ parameters are a RESULT of the module parameters. -->
     <role>read</role>
    </port>
    <port>
-    <name>AVL_READDATA</name>
-    <direction>Output</direction>
-    <width>32</width>
-    <role>readdata</role>
-   </port>
-   <port>
     <name>AVL_WRITE</name>
     <direction>Input</direction>
     <width>1</width>
@@ -599,6 +593,12 @@ parameters are a RESULT of the module parameters. -->
     <direction>Input</direction>
     <width>32</width>
     <role>writedata</role>
+   </port>
+   <port>
+    <name>AVL_READDATA</name>
+    <direction>Output</direction>
+    <width>32</width>
+    <role>readdata</role>
    </port>
   </interface>
   <interface name="Export_Data" kind="conduit_end" version="15.0">
@@ -884,9 +884,9 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>AES_Decryption_Core_0</moduleName>
+    <moduleName>AES_Decryption_Core_1</moduleName>
     <slaveName>CLK</slaveName>
-    <name>AES_Decryption_Core_0.CLK</name>
+    <name>AES_Decryption_Core_1.CLK</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -3333,7 +3333,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x10' /><slave name='sysid_qsys_0.control_slave' start='0x28' end='0x30' /><slave name='sdram_pll.pll_slave' start='0x30' end='0x40' /><slave name='timer_0.s1' start='0x40' end='0x60' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x60' end='0x68' /><slave name='AES_Decryption_Core_0.AES_Slave' start='0x100' end='0x140' /><slave name='nios2_qsys_0.debug_mem_slave' start='0x1000' end='0x1800' /><slave name='sdram.s1' start='0x10000000' end='0x18000000' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x10' /><slave name='sysid_qsys_0.control_slave' start='0x28' end='0x30' /><slave name='sdram_pll.pll_slave' start='0x30' end='0x40' /><slave name='timer_0.s1' start='0x40' end='0x60' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x60' end='0x68' /><slave name='AES_Decryption_Core_1.AES_Slave' start='0x100' end='0x140' /><slave name='nios2_qsys_0.debug_mem_slave' start='0x1000' end='0x1800' /><slave name='sdram.s1' start='0x10000000' end='0x18000000' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -4001,9 +4001,9 @@ parameters are a RESULT of the module parameters. -->
    </port>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>AES_Decryption_Core_0</moduleName>
+    <moduleName>AES_Decryption_Core_1</moduleName>
     <slaveName>AES_Slave</slaveName>
-    <name>AES_Decryption_Core_0.AES_Slave</name>
+    <name>AES_Decryption_Core_1.AES_Slave</name>
     <baseAddress>256</baseAddress>
     <span>64</span>
    </memoryBlock>
@@ -8869,7 +8869,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1522186126</value>
+   <value>1522789035</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -8889,7 +8889,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1522186126</value>
+   <value>1522789035</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -8905,7 +8905,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1522186126</value>
+   <value>1522789035</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -10159,11 +10159,11 @@ parameters are a RESULT of the module parameters. -->
   </interface>
  </module>
  <connection
-   name="nios2_qsys_0.data_master/AES_Decryption_Core_0.AES_Slave"
+   name="nios2_qsys_0.data_master/AES_Decryption_Core_1.AES_Slave"
    kind="avalon"
    version="15.0"
    start="nios2_qsys_0.data_master"
-   end="AES_Decryption_Core_0.AES_Slave">
+   end="AES_Decryption_Core_1.AES_Slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -10206,7 +10206,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_qsys_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
-  <endModule>AES_Decryption_Core_0</endModule>
+  <endModule>AES_Decryption_Core_1</endModule>
   <endConnectionPoint>AES_Slave</endConnectionPoint>
  </connection>
  <connection
@@ -10849,11 +10849,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk/AES_Decryption_Core_0.CLK"
+   name="clk_0.clk/AES_Decryption_Core_1.CLK"
    kind="clock"
    version="15.0"
    start="clk_0.clk"
-   end="AES_Decryption_Core_0.CLK">
+   end="AES_Decryption_Core_1.CLK">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -10872,7 +10872,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
-  <endModule>AES_Decryption_Core_0</endModule>
+  <endModule>AES_Decryption_Core_1</endModule>
   <endConnectionPoint>CLK</endConnectionPoint>
  </connection>
  <connection
@@ -11108,11 +11108,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="clk_0.clk_reset/AES_Decryption_Core_0.RESET"
+   name="clk_0.clk_reset/AES_Decryption_Core_1.RESET"
    kind="reset"
    version="15.0"
    start="clk_0.clk_reset"
-   end="AES_Decryption_Core_0.RESET">
+   end="AES_Decryption_Core_1.RESET">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -11131,7 +11131,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
-  <endModule>AES_Decryption_Core_0</endModule>
+  <endModule>AES_Decryption_Core_1</endModule>
   <endConnectionPoint>RESET</endConnectionPoint>
  </connection>
  <connection
@@ -11324,11 +11324,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset1</endConnectionPoint>
  </connection>
  <connection
-   name="nios2_qsys_0.debug_reset_request/AES_Decryption_Core_0.RESET"
+   name="nios2_qsys_0.debug_reset_request/AES_Decryption_Core_1.RESET"
    kind="reset"
    version="15.0"
    start="nios2_qsys_0.debug_reset_request"
-   end="AES_Decryption_Core_0.RESET">
+   end="AES_Decryption_Core_1.RESET">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -11347,7 +11347,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>nios2_qsys_0</startModule>
   <startConnectionPoint>debug_reset_request</startConnectionPoint>
-  <endModule>AES_Decryption_Core_0</endModule>
+  <endModule>AES_Decryption_Core_1</endModule>
   <endConnectionPoint>RESET</endConnectionPoint>
  </connection>
  <connection
@@ -11382,8 +11382,8 @@ parameters are a RESULT of the module parameters. -->
   <name>AES_Decryption_Core</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>AES Decryption Core</displayName>
-  <version>1.1</version>
+  <displayName>AES_Decryption_Core</displayName>
+  <version>1.0</version>
  </plugin>
  <plugin>
   <instanceCount>8</instanceCount>

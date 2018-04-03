@@ -1,5 +1,4 @@
 	lab9_soc u0 (
-		.aes_export_EXPORT_DATA (<connected-to-aes_export_EXPORT_DATA>), // aes_export.EXPORT_DATA
 		.clk_clk                (<connected-to-clk_clk>),                //        clk.clk
 		.reset_reset_n          (<connected-to-reset_reset_n>),          //      reset.reset_n
 		.sdram_clk_clk          (<connected-to-sdram_clk_clk>),          //  sdram_clk.clk
@@ -11,6 +10,7 @@
 		.sdram_wire_dq          (<connected-to-sdram_wire_dq>),          //           .dq
 		.sdram_wire_dqm         (<connected-to-sdram_wire_dqm>),         //           .dqm
 		.sdram_wire_ras_n       (<connected-to-sdram_wire_ras_n>),       //           .ras_n
-		.sdram_wire_we_n        (<connected-to-sdram_wire_we_n>)         //           .we_n
+		.sdram_wire_we_n        (<connected-to-sdram_wire_we_n>),        //           .we_n
+		.aes_export_EXPORT_DATA (<connected-to-aes_export_EXPORT_DATA>)  // aes_export.EXPORT_DATA
 	);
 

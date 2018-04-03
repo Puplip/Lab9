@@ -1,5 +1,5 @@
 Flow report for Lab9
-Mon Apr 02 23:45:21 2018
+Tue Apr 03 16:01:36 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr 02 23:45:21 2018      ;
+; Flow Status                        ; Successful - Tue Apr 03 16:01:36 2018      ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                      ; Lab9                                       ;
-; Top-level Entity Name              ; AES                                        ;
+; Top-level Entity Name              ; lab9_top                                   ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 2,953                                      ;
-;     Total combinational functions  ; 2,953                                      ;
-;     Dedicated logic registers      ; 151                                        ;
-; Total registers                    ; 151                                        ;
-; Total pins                         ; 388                                        ;
+; Total logic elements               ; 6,675 / 114,480 ( 6 % )                    ;
+;     Total combinational functions  ; 5,790 / 114,480 ( 5 % )                    ;
+;     Dedicated logic registers      ; 2,662 / 114,480 ( 2 % )                    ;
+; Total registers                    ; 2781                                       ;
+; Total pins                         ; 142 / 529 ( 27 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 114,688                                    ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total memory bits                  ; 126,080 / 3,981,312 ( 3 % )                ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
+; Total PLLs                         ; 1 / 4 ( 25 % )                             ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/02/2018 23:44:55 ;
+; Start date & time ; 04/03/2018 15:59:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab9                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                                      ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 238368721128666.152273069408576                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 238368721128666.152278914012612                            ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                                         ; --            ; --          ; testbench      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                                                  ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                                          ; --            ; --          ; eda_simulation ;
@@ -92,44 +92,56 @@ agreement for further details.
 ; MISC_FILE                            ; lab9_soc/synthesis/../lab9_soc.cmp                         ; --            ; --          ; --             ;
 ; MISC_FILE                            ; lab9_soc/synthesis/../../lab9_soc.qsys                     ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                                       ; --            ; --          ; --             ;
-; PARTITION_COLOR                      ; 16764057                                                   ; --            ; AES         ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                      ; --            ; AES         ; Top            ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                                     ; --            ; AES         ; Top            ;
+; PARTITION_COLOR                      ; 16764057                                                   ; --            ; lab9_top    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                                      ; --            ; lab9_top    ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                                     ; --            ; lab9_top    ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                                        ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                      ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                                               ; --            ; --          ; --             ;
 ; SLD_FILE                             ; lab9_soc/synthesis/lab9_soc.regmap                         ; --            ; --          ; --             ;
 ; SLD_FILE                             ; lab9_soc/synthesis/lab9_soc.debuginfo                      ; --            ; --          ; --             ;
-; SLD_INFO                             ; QSYS_NAME lab9_soc HAS_SOPCINFO 1 GENERATION_ID 1522186126 ; --            ; lab9_soc    ; --             ;
+; SLD_INFO                             ; QSYS_NAME lab9_soc HAS_SOPCINFO 1 GENERATION_ID 1522789035 ; --            ; lab9_soc    ; --             ;
 ; SOPCINFO_FILE                        ; lab9_soc/synthesis/../../lab9_soc.sopcinfo                 ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                   ; On                                                         ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                     ; AES                                                        ; Lab9          ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; lab9_top                                                   ; Lab9          ; --          ; --             ;
 +--------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 770 MB              ; 00:00:38                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:38                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:49     ; 1.0                     ; 916 MB              ; 00:01:15                           ;
+; Fitter                    ; 00:01:13     ; 1.0                     ; 1380 MB             ; 00:01:13                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 705 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 896 MB              ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:09     ; 1.0                     ; 735 MB              ; 00:00:07                           ;
+; Total                     ; 00:02:23     ; --                      ; --                  ; 00:02:47                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; RarePepe         ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Lab9 -c Lab9
+quartus_fit --read_settings_files=off --write_settings_files=off Lab9 -c Lab9
+quartus_asm --read_settings_files=off --write_settings_files=off Lab9 -c Lab9
+quartus_sta Lab9 -c Lab9
+quartus_eda --read_settings_files=off --write_settings_files=off Lab9 -c Lab9
 
 
 

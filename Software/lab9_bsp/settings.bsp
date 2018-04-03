@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Mar 27, 2018 4:56:40 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1522187800920</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\altera\15.0\Programs\lab9git\Software\lab9_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>Apr 3, 2018 4:12:37 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1522789957639</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>D:\Projects\Lab9_Part2\Lab9\Software\lab9_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\lab9_soc.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -917,7 +917,7 @@
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>AES_Decryption_Core_0</slaveDescriptor>
+                <slaveDescriptor>AES_Decryption_Core_1</slaveDescriptor>
                 <addressRange>0x00000100 - 0x0000013F</addressRange>
                 <addressSpan>64</addressSpan>
                 <attributes/>

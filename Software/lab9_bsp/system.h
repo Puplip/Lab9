@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_qsys_0' in SOPC Builder design 'lab9_soc'
  * SOPC Builder design path: ../../lab9_soc.sopcinfo
  *
- * Generated: Tue Mar 27 16:33:15 CDT 2018
+ * Generated: Tue Apr 03 16:02:18 CDT 2018
  */
 
 /*
@@ -56,17 +56,17 @@
 
 
 /*
- * AES_Decryption_Core_0 configuration
+ * AES_Decryption_Core_1 configuration
  *
  */
 
-#define AES_DECRYPTION_CORE_0_BASE 0x100
-#define AES_DECRYPTION_CORE_0_IRQ -1
-#define AES_DECRYPTION_CORE_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define AES_DECRYPTION_CORE_0_NAME "/dev/AES_Decryption_Core_0"
-#define AES_DECRYPTION_CORE_0_SPAN 64
-#define AES_DECRYPTION_CORE_0_TYPE "AES_Decryption_Core"
-#define ALT_MODULE_CLASS_AES_Decryption_Core_0 AES_Decryption_Core
+#define AES_DECRYPTION_CORE_1_BASE 0x100
+#define AES_DECRYPTION_CORE_1_IRQ -1
+#define AES_DECRYPTION_CORE_1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define AES_DECRYPTION_CORE_1_NAME "/dev/AES_Decryption_Core_1"
+#define AES_DECRYPTION_CORE_1_SPAN 64
+#define AES_DECRYPTION_CORE_1_TYPE "AES_Decryption_Core"
+#define ALT_MODULE_CLASS_AES_Decryption_Core_1 AES_Decryption_Core
 
 
 /*
@@ -316,7 +316,7 @@
 #define SYSID_QSYS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_QSYS_0_NAME "/dev/sysid_qsys_0"
 #define SYSID_QSYS_0_SPAN 8
-#define SYSID_QSYS_0_TIMESTAMP 1522186126
+#define SYSID_QSYS_0_TIMESTAMP 1522789035
 #define SYSID_QSYS_0_TYPE "altera_avalon_sysid_qsys"
 
 

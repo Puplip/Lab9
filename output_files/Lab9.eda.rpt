@@ -1,6 +1,6 @@
 EDA Netlist Writer report for Lab9
-Tue Mar 27 16:55:41 2018
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
+Tue Apr 03 16:01:36 2018
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar 27 16:55:41 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Apr 03 16:01:36 2018 ;
 ; Revision Name             ; Lab9                                  ;
 ; Top-level Entity Name     ; lab9_top                              ;
 ; Family                    ; Cyclone IV E                          ;
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Simulation Generated Files                                                        ;
-+-----------------------------------------------------------------------------------+
-; Generated Files                                                                   ;
-+-----------------------------------------------------------------------------------+
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_7_1200mv_85c_slow.svo    ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_7_1200mv_0c_slow.svo     ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_min_1200mv_0c_fast.svo   ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9.svo                      ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_7_1200mv_85c_v_slow.sdo  ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_7_1200mv_0c_v_slow.sdo   ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_min_1200mv_0c_v_fast.sdo ;
-; C:/altera/15.0/Programs/lab9git/simulation/modelsim/Lab9_v.sdo                    ;
-+-----------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Simulation Generated Files                                                    ;
++-------------------------------------------------------------------------------+
+; Generated Files                                                               ;
++-------------------------------------------------------------------------------+
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_7_1200mv_85c_slow.svo    ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_7_1200mv_0c_slow.svo     ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_min_1200mv_0c_fast.svo   ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9.svo                      ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_7_1200mv_85c_v_slow.sdo  ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_7_1200mv_0c_v_slow.sdo   ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_min_1200mv_0c_v_fast.sdo ;
+; D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/Lab9_v.sdo                    ;
++-------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,21 +88,21 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
-    Info: Version 15.0.0 Build 145 04/22/2015 Patches 0.01we SJ Web Edition
-    Info: Processing started: Tue Mar 27 16:55:35 2018
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Tue Apr 03 16:01:27 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Lab9 -c Lab9
-Info (204019): Generated file Lab9_7_1200mv_85c_slow.svo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9_7_1200mv_0c_slow.svo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9_min_1200mv_0c_fast.svo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9.svo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9_7_1200mv_85c_v_slow.sdo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9_7_1200mv_0c_v_slow.sdo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9_min_1200mv_0c_v_fast.sdo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file Lab9_v.sdo in folder "C:/altera/15.0/Programs/lab9git/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_7_1200mv_85c_slow.svo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_7_1200mv_0c_slow.svo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_min_1200mv_0c_fast.svo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9.svo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_7_1200mv_85c_v_slow.sdo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_7_1200mv_0c_v_slow.sdo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_min_1200mv_0c_v_fast.sdo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file Lab9_v.sdo in folder "D:/Projects/Lab9_Part2/Lab9/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 702 megabytes
-    Info: Processing ended: Tue Mar 27 16:55:41 2018
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 735 megabytes
+    Info: Processing ended: Tue Apr 03 16:01:36 2018
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -8,6 +8,6 @@
    <inputclock preferredWidth="128" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library expandedCategories="Library,Project/ECE 385 Custom IPs,Project" />
  <window width="1917" height="1026" x="0" y="4" />
 </preferences>

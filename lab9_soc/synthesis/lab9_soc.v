@@ -32,13 +32,13 @@ module lab9_soc (
 	wire         nios2_qsys_0_instruction_master_waitrequest;                  // mm_interconnect_0:nios2_qsys_0_instruction_master_waitrequest -> nios2_qsys_0:i_waitrequest
 	wire  [28:0] nios2_qsys_0_instruction_master_address;                      // nios2_qsys_0:i_address -> mm_interconnect_0:nios2_qsys_0_instruction_master_address
 	wire         nios2_qsys_0_instruction_master_read;                         // nios2_qsys_0:i_read -> mm_interconnect_0:nios2_qsys_0_instruction_master_read
-	wire         mm_interconnect_0_aes_decryption_core_0_aes_slave_chipselect; // mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_chipselect -> AES_Decryption_Core_0:AVL_CS
-	wire  [31:0] mm_interconnect_0_aes_decryption_core_0_aes_slave_readdata;   // AES_Decryption_Core_0:AVL_READDATA -> mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_readdata
-	wire   [3:0] mm_interconnect_0_aes_decryption_core_0_aes_slave_address;    // mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_address -> AES_Decryption_Core_0:AVL_ADDR
-	wire         mm_interconnect_0_aes_decryption_core_0_aes_slave_read;       // mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_read -> AES_Decryption_Core_0:AVL_READ
-	wire   [3:0] mm_interconnect_0_aes_decryption_core_0_aes_slave_byteenable; // mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_byteenable -> AES_Decryption_Core_0:AVL_BYTE_EN
-	wire         mm_interconnect_0_aes_decryption_core_0_aes_slave_write;      // mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_write -> AES_Decryption_Core_0:AVL_WRITE
-	wire  [31:0] mm_interconnect_0_aes_decryption_core_0_aes_slave_writedata;  // mm_interconnect_0:AES_Decryption_Core_0_AES_Slave_writedata -> AES_Decryption_Core_0:AVL_WRITEDATA
+	wire         mm_interconnect_0_aes_decryption_core_1_aes_slave_chipselect; // mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_chipselect -> AES_Decryption_Core_1:AVL_CS
+	wire  [31:0] mm_interconnect_0_aes_decryption_core_1_aes_slave_readdata;   // AES_Decryption_Core_1:AVL_READDATA -> mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_readdata
+	wire   [3:0] mm_interconnect_0_aes_decryption_core_1_aes_slave_address;    // mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_address -> AES_Decryption_Core_1:AVL_ADDR
+	wire         mm_interconnect_0_aes_decryption_core_1_aes_slave_read;       // mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_read -> AES_Decryption_Core_1:AVL_READ
+	wire   [3:0] mm_interconnect_0_aes_decryption_core_1_aes_slave_byteenable; // mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_byteenable -> AES_Decryption_Core_1:AVL_BYTE_EN
+	wire         mm_interconnect_0_aes_decryption_core_1_aes_slave_write;      // mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_write -> AES_Decryption_Core_1:AVL_WRITE
+	wire  [31:0] mm_interconnect_0_aes_decryption_core_1_aes_slave_writedata;  // mm_interconnect_0:AES_Decryption_Core_1_AES_Slave_writedata -> AES_Decryption_Core_1:AVL_WRITEDATA
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect;   // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_chipselect -> jtag_uart_0:av_chipselect
 	wire  [31:0] mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_readdata;     // jtag_uart_0:av_readdata -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_readdata
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest;  // jtag_uart_0:av_waitrequest -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_waitrequest
@@ -85,22 +85,22 @@ module lab9_soc (
 	wire         irq_mapper_receiver0_irq;                                     // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                     // timer_0:irq -> irq_mapper:receiver1_irq
 	wire  [31:0] nios2_qsys_0_irq_irq;                                         // irq_mapper:sender_irq -> nios2_qsys_0:irq
-	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> [AES_Decryption_Core_0:RESET, mm_interconnect_0:AES_Decryption_Core_0_RESET_reset_bridge_in_reset_reset, timer_0:reset_n]
+	wire         rst_controller_reset_out_reset;                               // rst_controller:reset_out -> [AES_Decryption_Core_1:RESET, mm_interconnect_0:AES_Decryption_Core_1_RESET_reset_bridge_in_reset_reset, timer_0:reset_n]
 	wire         nios2_qsys_0_debug_reset_request_reset;                       // nios2_qsys_0:debug_reset_request -> rst_controller:reset_in1
 	wire         rst_controller_001_reset_out_reset;                           // rst_controller_001:reset_out -> [irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:nios2_qsys_0_reset_reset_bridge_in_reset_reset, nios2_qsys_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset, sdram_pll:reset, sysid_qsys_0:reset_n]
 	wire         rst_controller_001_reset_out_reset_req;                       // rst_controller_001:reset_req -> [nios2_qsys_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         rst_controller_002_reset_out_reset;                           // rst_controller_002:reset_out -> [mm_interconnect_0:sdram_reset_reset_bridge_in_reset_reset, sdram:reset_n]
 
-	avalon_aes_interface aes_decryption_core_0 (
+	avalon_aes_interface aes_decryption_core_1 (
 		.CLK           (clk_clk),                                                      //         CLK.clk
 		.RESET         (rst_controller_reset_out_reset),                               //       RESET.reset
-		.AVL_ADDR      (mm_interconnect_0_aes_decryption_core_0_aes_slave_address),    //   AES_Slave.address
-		.AVL_BYTE_EN   (mm_interconnect_0_aes_decryption_core_0_aes_slave_byteenable), //            .byteenable
-		.AVL_CS        (mm_interconnect_0_aes_decryption_core_0_aes_slave_chipselect), //            .chipselect
-		.AVL_READ      (mm_interconnect_0_aes_decryption_core_0_aes_slave_read),       //            .read
-		.AVL_READDATA  (mm_interconnect_0_aes_decryption_core_0_aes_slave_readdata),   //            .readdata
-		.AVL_WRITE     (mm_interconnect_0_aes_decryption_core_0_aes_slave_write),      //            .write
-		.AVL_WRITEDATA (mm_interconnect_0_aes_decryption_core_0_aes_slave_writedata),  //            .writedata
+		.AVL_ADDR      (mm_interconnect_0_aes_decryption_core_1_aes_slave_address),    //   AES_Slave.address
+		.AVL_BYTE_EN   (mm_interconnect_0_aes_decryption_core_1_aes_slave_byteenable), //            .byteenable
+		.AVL_CS        (mm_interconnect_0_aes_decryption_core_1_aes_slave_chipselect), //            .chipselect
+		.AVL_READ      (mm_interconnect_0_aes_decryption_core_1_aes_slave_read),       //            .read
+		.AVL_WRITE     (mm_interconnect_0_aes_decryption_core_1_aes_slave_write),      //            .write
+		.AVL_WRITEDATA (mm_interconnect_0_aes_decryption_core_1_aes_slave_writedata),  //            .writedata
+		.AVL_READDATA  (mm_interconnect_0_aes_decryption_core_1_aes_slave_readdata),   //            .readdata
 		.EXPORT_DATA   (aes_export_EXPORT_DATA)                                        // Export_Data.EXPORT_DATA
 	);
 
@@ -218,7 +218,7 @@ module lab9_soc (
 	lab9_soc_mm_interconnect_0 mm_interconnect_0 (
 		.clk_0_clk_clk                                           (clk_clk),                                                      //                                         clk_0_clk.clk
 		.sdram_pll_c0_clk                                        (sdram_pll_c0_clk),                                             //                                      sdram_pll_c0.clk
-		.AES_Decryption_Core_0_RESET_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                               // AES_Decryption_Core_0_RESET_reset_bridge_in_reset.reset
+		.AES_Decryption_Core_1_RESET_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                               // AES_Decryption_Core_1_RESET_reset_bridge_in_reset.reset
 		.nios2_qsys_0_reset_reset_bridge_in_reset_reset          (rst_controller_001_reset_out_reset),                           //          nios2_qsys_0_reset_reset_bridge_in_reset.reset
 		.sdram_reset_reset_bridge_in_reset_reset                 (rst_controller_002_reset_out_reset),                           //                 sdram_reset_reset_bridge_in_reset.reset
 		.nios2_qsys_0_data_master_address                        (nios2_qsys_0_data_master_address),                             //                          nios2_qsys_0_data_master.address
@@ -233,13 +233,13 @@ module lab9_soc (
 		.nios2_qsys_0_instruction_master_waitrequest             (nios2_qsys_0_instruction_master_waitrequest),                  //                                                  .waitrequest
 		.nios2_qsys_0_instruction_master_read                    (nios2_qsys_0_instruction_master_read),                         //                                                  .read
 		.nios2_qsys_0_instruction_master_readdata                (nios2_qsys_0_instruction_master_readdata),                     //                                                  .readdata
-		.AES_Decryption_Core_0_AES_Slave_address                 (mm_interconnect_0_aes_decryption_core_0_aes_slave_address),    //                   AES_Decryption_Core_0_AES_Slave.address
-		.AES_Decryption_Core_0_AES_Slave_write                   (mm_interconnect_0_aes_decryption_core_0_aes_slave_write),      //                                                  .write
-		.AES_Decryption_Core_0_AES_Slave_read                    (mm_interconnect_0_aes_decryption_core_0_aes_slave_read),       //                                                  .read
-		.AES_Decryption_Core_0_AES_Slave_readdata                (mm_interconnect_0_aes_decryption_core_0_aes_slave_readdata),   //                                                  .readdata
-		.AES_Decryption_Core_0_AES_Slave_writedata               (mm_interconnect_0_aes_decryption_core_0_aes_slave_writedata),  //                                                  .writedata
-		.AES_Decryption_Core_0_AES_Slave_byteenable              (mm_interconnect_0_aes_decryption_core_0_aes_slave_byteenable), //                                                  .byteenable
-		.AES_Decryption_Core_0_AES_Slave_chipselect              (mm_interconnect_0_aes_decryption_core_0_aes_slave_chipselect), //                                                  .chipselect
+		.AES_Decryption_Core_1_AES_Slave_address                 (mm_interconnect_0_aes_decryption_core_1_aes_slave_address),    //                   AES_Decryption_Core_1_AES_Slave.address
+		.AES_Decryption_Core_1_AES_Slave_write                   (mm_interconnect_0_aes_decryption_core_1_aes_slave_write),      //                                                  .write
+		.AES_Decryption_Core_1_AES_Slave_read                    (mm_interconnect_0_aes_decryption_core_1_aes_slave_read),       //                                                  .read
+		.AES_Decryption_Core_1_AES_Slave_readdata                (mm_interconnect_0_aes_decryption_core_1_aes_slave_readdata),   //                                                  .readdata
+		.AES_Decryption_Core_1_AES_Slave_writedata               (mm_interconnect_0_aes_decryption_core_1_aes_slave_writedata),  //                                                  .writedata
+		.AES_Decryption_Core_1_AES_Slave_byteenable              (mm_interconnect_0_aes_decryption_core_1_aes_slave_byteenable), //                                                  .byteenable
+		.AES_Decryption_Core_1_AES_Slave_chipselect              (mm_interconnect_0_aes_decryption_core_1_aes_slave_chipselect), //                                                  .chipselect
 		.jtag_uart_0_avalon_jtag_slave_address                   (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_address),      //                     jtag_uart_0_avalon_jtag_slave.address
 		.jtag_uart_0_avalon_jtag_slave_write                     (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write),        //                                                  .write
 		.jtag_uart_0_avalon_jtag_slave_read                      (mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read),         //                                                  .read

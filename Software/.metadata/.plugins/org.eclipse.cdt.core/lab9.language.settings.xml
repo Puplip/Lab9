@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project>
-	<configuration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.378790501" name="Nios II">
+	<configuration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.735201835" name="Nios II">
 		<extension point="org.eclipse.cdt.core.LanguageSettingsProvider">
 			<provider id="altera.tool.Nios2GCCBuiltinSpecsDetector">
 				<language id="org.eclipse.cdt.core.gcc">
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include-fixed">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="NIOS2" value="1">
@@ -660,22 +660,22 @@
 					</entry>
 				</language>
 				<language id="org.eclipse.cdt.core.g++">
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/nios2-elf/include/c++/4.9.1">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/nios2-elf/include/c++/4.9.1">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/nios2-elf/include/c++/4.9.1/nios2-elf">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/nios2-elf/include/c++/4.9.1/nios2-elf">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/nios2-elf/include/c++/4.9.1/backward">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/nios2-elf/include/c++/4.9.1/backward">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include-fixed">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/lib/gcc/nios2-elf/4.9.1/include-fixed">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
-					<entry kind="includePath" name="C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
+					<entry kind="includePath" name="D:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/nios2-elf/include">
 						<flag value="BUILTIN|READONLY"/>
 					</entry>
 					<entry kind="macro" name="NIOS2" value="1">
@@ -1359,7 +1359,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="HAL/src/alt_wait.c">
+					<resource project-relative-path="alt_sys_init.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1373,7 +1373,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="alt_sys_init.c">
+					<resource project-relative-path="HAL/src/alt_wait.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1401,7 +1401,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="HAL/src/alt_printf.c">
+					<resource project-relative-path="drivers/src/altera_avalon_timer_vars.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1415,7 +1415,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="drivers/src/altera_avalon_timer_vars.c">
+					<resource project-relative-path="HAL/src/alt_printf.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1555,7 +1555,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="HAL/src/alt_dev_llist_insert.c">
+					<resource project-relative-path="HAL/src/alt_fd_unlock.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -1569,7 +1569,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="HAL/src/alt_fd_unlock.c">
+					<resource project-relative-path="HAL/src/alt_dev_llist_insert.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2073,6 +2073,20 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
+					<resource project-relative-path="HAL/src/alt_sbrk.c">
+						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lab9_bsp">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lab9_bsp/drivers/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
+						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
+						<entry kind="macro" name="__hal__" value=""/>
+					</resource>
 					<resource project-relative-path="HAL/src/alt_do_ctors.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -2088,20 +2102,6 @@
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
 					<resource project-relative-path="HAL/src/alt_getchar.c">
-						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/lab9_bsp">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="includePath" name="/lab9_bsp/drivers/inc">
-							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
-						</entry>
-						<entry kind="macro" name="ALT_NO_INSTRUCTION_EMULATION" value=""/>
-						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
-						<entry kind="macro" name="__hal__" value=""/>
-					</resource>
-					<resource project-relative-path="HAL/src/alt_sbrk.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2213,7 +2213,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="HAL/src/alt_gettod.c">
+					<resource project-relative-path="drivers/src/altera_avalon_jtag_uart_write.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -2241,7 +2241,7 @@
 						<entry kind="macro" name="ALT_SINGLE_THREADED" value=""/>
 						<entry kind="macro" name="__hal__" value=""/>
 					</resource>
-					<resource project-relative-path="drivers/src/altera_avalon_jtag_uart_write.c">
+					<resource project-relative-path="HAL/src/alt_gettod.c">
 						<entry kind="includePath" name="/lab9_bsp/HAL/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
