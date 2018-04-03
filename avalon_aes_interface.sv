@@ -39,26 +39,25 @@ module avalon_aes_interface (
 );
 
 
-logic [15:0][31:0] Regs;
-logic [15:0] Chip_Selects;
+logic [31:0] Registers [15:0];
+logic [31:0] Registers_Next;
 
-register reg00(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[00]),.CS(Chip_Selects[00] && AVL_CS));
-register reg01(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[01]),.CS(Chip_Selects[01] && AVL_CS));
-register reg02(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[02]),.CS(Chip_Selects[02] && AVL_CS));
-register reg03(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[03]),.CS(Chip_Selects[03] && AVL_CS));
-register reg04(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[04]),.CS(Chip_Selects[04] && AVL_CS));
-register reg05(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[05]),.CS(Chip_Selects[05] && AVL_CS));
-register reg06(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[06]),.CS(Chip_Selects[06] && AVL_CS));
-register reg07(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[07]),.CS(Chip_Selects[07] && AVL_CS));
-register reg08(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[08]),.CS(Chip_Selects[08] && AVL_CS));
-register reg09(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[09]),.CS(Chip_Selects[09] && AVL_CS));
-register reg11(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[11]),.CS(Chip_Selects[11] && AVL_CS));
-register reg12(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[12]),.CS(Chip_Selects[12] && AVL_CS));
-register reg13(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[13]),.CS(Chip_Selects[13] && AVL_CS));
-register reg14(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[14]),.CS(Chip_Selects[14] && AVL_CS));
-register reg15(.*,.Data_In(AVL_WRITEDATA),.Data_Out(Regs[15]),.CS(Chip_Selects[15] && AVL_CS));
+assign Registers_Next[31:24] = (AVL_BYTE_EN[3])?(AVL_WRITEDATA[31:24]):(Registers[AVL_ADDR][31:24]);
+assign Registers_Next[23:16] = (AVL_BYTE_EN[2])?(AVL_WRITEDATA[23:16]):(Registers[AVL_ADDR][23:16]);
+assign Registers_Next[15:8] = (AVL_BYTE_EN[1])?(AVL_WRITEDATA[15:8]):(Registers[AVL_ADDR][15:8]);
+assign Registers_Next[7:0] = (AVL_BYTE_EN[0])?(AVL_WRITEDATA[7:0]):(Registers[AVL_ADDR][7:0]);
 
-mux16 my_mux(.*,.Data_In(Regs),.Data_Out(AVL_WRITEDATA));
-dec16 my_dec(.*,.Out(Chip_Selects));
+assign EXPORT_DATA[31:16] = Registers[3][31:16];
+assign EXPORT_DATA[15:0] = Registers[0][15:0];
+
+assign AVL_READDATA = Registers[AVL_ADDR];
+
+always_ff @ (posedge CLK) begin
+	if(RESET)
+		
+	if(AVL_WRITE)
+		Registers[AVL_ADDR] = Registers_Next;
+end
+
 
 endmodule
